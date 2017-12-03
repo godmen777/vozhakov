@@ -1,0 +1,25 @@
+.DS_Store
+
+# Python
+*.pyc
+*.pyo
+
+# Common IDEs
+*.swp
+.idea/
+.buildpath
+.project
+.settings
+.ropeproject/
+atlassian-ide-plugin.xml
+.vscode/
+
+# Project
+.env/
+settings_local.py
+logs/
+pids/
+save_2gis_data.py
+get_2gis_data.py
+get_2gis_filials.py
+media/
