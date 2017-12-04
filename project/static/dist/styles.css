@@ -1,5 +1,7 @@
-.colors {
+.colors__colors {
   background-color: #000000; }
 
-.test {
+.colors__test {
   color: #333333; }
+.app__main {
+  background-color: red; }

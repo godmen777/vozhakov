@@ -16,15 +16,13 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        // loaders: ['style-loader', 'css-loader', 'sass-loader', 'resolve-url-loader?sourceMap', 'sass-loader?sourceMap'],
-        // loaders: ExtractTextPlugin.extract('style-loader', 'css-loader', 'sass-loader', 'resolve-url-loader?sourceMap', 'sass-loader?sourceMap'),
         use: ExtractTextPlugin.extract({
-          use: ['css-loader', 'sass-loader']
+          use: ['css-loader?modules&importLoaders=1&localIdentName=[name]__[local]', 'sass-loader']
         })
       },
     ]
   },
   plugins: [
-    new ExtractTextPlugin("styles.css"),
+    new ExtractTextPlugin("styles.css", { allChunks: true }),
   ]
 };
