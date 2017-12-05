@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% load cropping %}
+
 
 {% block content %}
     <div class="row">
@@ -8,7 +10,11 @@
         {% for product in products %}
             <div class="col-4">
                 <div class="card" style="margin-bottom: 1rem;">
-                    <img class="card-img-top" src="..." alt="Card image cap" style="max-height: 200px">
+                    <img
+                        class="card-img-top"
+                        src="{% cropped_thumbnail product.get_first_image "cropping_255x170" scale=1 %}"
+                        alt="Card image cap"
+                        style="max-height: 200px">
                     <div class="card-body">
                         <h4 class="card-title">{{ product.name }}</h4>
                         <p class="card-text">{{ product.description }}</p>
