@@ -1,6 +1,8 @@
-import './src/scss/colors.scss'
-import './src/scss/global.scss'
-import './src/scss/header.scss'
+import './src/scss/_colors.sass'
+import './src/scss/_colorizing.sass'
+import './src/scss/global.sass'
+import './src/scss/header.sass'
+import './src/scss/footer.sass'
 
 // import React from 'react';
 // import ReactDOM from 'react-dom';

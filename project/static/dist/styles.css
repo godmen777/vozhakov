@@ -1,15 +1,86 @@
-.colors {
+.bg-white {
+  background-color: #ffffff; }
+
+.white {
+  color: #ffffff; }
+
+.b-white {
+  border-color: #ffffff; }
+
+.bg-black {
   background-color: #000000; }
 
-.test {
-  color: #333333; }
-@charset "UTF-8";
-.wrapper {
-  height: 100%;
-  width: 100%;
-  background: #fefefe;
-  /* Старые браузеры */
-  background: radial-gradient(circle at top center, #fefefe, #e2e0e1); }
-.logo img {
-  width: 80px;
-  height: auto; }
+.black {
+  color: #000000; }
+
+.b-black {
+  border-color: #000000; }
+
+.bg-gray {
+  background-color: #f1f2f2; }
+
+.gray {
+  color: #f1f2f2; }
+
+.b-gray {
+  border-color: #f1f2f2; }
+
+.bg-grayOslo {
+  background-color: #939598; }
+
+.grayOslo {
+  color: #939598; }
+
+.b-grayOslo {
+  border-color: #939598; }
+
+.bg-blueDodger {
+  background-color: #3A83FF; }
+
+.blueDodger {
+  color: #3A83FF; }
+
+.b-blueDodger {
+  border-color: #3A83FF; }
+
+.bg-blueMariner {
+  background-color: #2C6CDA; }
+
+.blueMariner {
+  color: #2C6CDA; }
+
+.b-blueMariner {
+  border-color: #2C6CDA; }
+
+.bg-pinkHeliotrope {
+  background-color: #BC48FF; }
+
+.pinkHeliotrope {
+  color: #BC48FF; }
+
+.b-pinkHeliotrope {
+  border-color: #BC48FF; }
+
+.bg-shadow {
+  background-color: rgba(0, 0, 0, 0.15); }
+
+.shadow {
+  color: rgba(0, 0, 0, 0.15); }
+
+.b-shadow {
+  border-color: rgba(0, 0, 0, 0.15); }
+body {
+  padding-top: 68px; }
+body.main .navbar {
+  background: linear-gradient(to right, #3A83FF, #BC48FF);
+  padding: 0; }
+  body.main .navbar ul li a {
+    padding: 22px 13px !important; }
+  body.main .navbar ul li:hover a {
+    background-color: rgba(0, 0, 0, 0.15); }
+
+body.main .main-header {
+  padding: 45px 0;
+  background-color: #f1f2f2; }
+body.main footer {
+  background: linear-gradient(to right, #3A83FF, #BC48FF); }
