@@ -10,6 +10,13 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(png|jpg|jpeg|ttf)$/,
+        use: [
+         { loader: 'url-loader', options: { limit: 8192 } }
+         // limit => file.size =< 8192 bytes ? DataURI : File
+        ]
+      },
+      {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',

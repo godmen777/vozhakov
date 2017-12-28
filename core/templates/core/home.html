@@ -1,5 +1,77 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 
+{% block header %}
+<div class="main-header">
+    <div class="container">
+        <div class="row header-wrapper">
+{#            <div class="col-md-6"></div>#}
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-10">
+                        <img class="logo" src="{% static 'src/img/logo.png' %}" alt="">
+                        <div class="text-container">
+                            <p class="text">Педиатрия, инфекционные болезни, гепатология</p>
+                        </div>
+                        <img class="docs" src="{% static 'src/img/docs.png' %}" alt="">
+                        <div class="prof-wrapper">
+                            <div class="item">
+                                <p class="years">2004 – 2005 г.</p>
+                                <p class="description">Заведующий инфекционнымотделением Городской больницы №3</p>
+                            </div>
+                            <div class="item">
+                                <p class="years">2005 – 2011 г.</p>
+                                <p class="description">Главный врач НПО «Вирион»</p>
+                            </div>
+                            <div class="item">
+                                <p class="years">С 2011 г.</p>
+                                <p class="description">Частная врачебная практика</p>
+                            </div>
+                            <div class="item">
+                                <p class="years">Стаж работы</p>
+                                <p class="description">Более 20 лет</p>
+                            </div>
+                        </div>
+                        <div class="request-wrapper">
+                            <div class="request-block">
+                                <button class="button">Заявка на консультацию</button>
+                                <div class="dates"><a href="">Свободные даты</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="contacts-wrapper">
+                    <table>
+                        <tr>
+                            <td class="left">
+                                <img src="{% static 'src/img/phone.png' %}" alt="">
+                            </td>
+                            <td>
+                                <div class="data">
+                                    <div class="bold">8 913 866-26-66</div>
+                                    <div>С 10:00 до 20:00</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left">
+                                <img src="{% static 'src/img/tomsk.png' %}" alt="">
+                            </td>
+                            <td>
+                                <div class="data">
+                                    <div>Иркутский тр., 71д, 3 этаж, офис 1</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
 
 {% block content %}
     <div class="row">

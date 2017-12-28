@@ -1,5 +1,6 @@
 import './src/scss/_colors.sass'
 import './src/scss/_colorizing.sass'
+import './src/scss/_buttons.sass'
 import './src/scss/global.sass'
 import './src/scss/header.sass'
 import './src/scss/footer.sass'

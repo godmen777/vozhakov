@@ -4,8 +4,13 @@ body
   &.main
     // navbar
     .navbar
-      background: linear-gradient(to right, $blueDodger, $pinkHeliotrope)
+      background: linear-gradient(to right, $primary, $secondary)
       padding: 0
+      .navbar-toggler
+        border: none
+        border-radius: 0
+        outline: none
+        padding: 22px 13px
       ul
         li
           a
@@ -18,4 +23,80 @@ body
     .main-header
       padding: 45px 0
       background-color: $gray
-      //background-image: url("../img/logo.png")
+      //background-image: url("../img/main-header.jpg")
+      .header-wrapper
+        justify-content: space-between
+        flex-direction: row
+        //flex-flow: row-reverse
+        // right column
+        .contacts-wrapper
+          font-family: 'Open Sans', sans-serif
+          font-size: 14px
+          margin-top: 10px
+          table
+            .left
+              display: flex
+              justify-content: flex-end
+              padding-top: 5px
+            .data
+              margin: 0 0 12px 10px
+          img
+            height: 16px
+          .bold
+            font-weight: 700
+
+        // left column
+        // left column header skills
+        .text-container
+          position: relative
+          margin-top: 20px
+          p.text
+            padding-top: 10px
+            font-family: 'Open Sans', sans-serif
+            font-size: 16px
+            font-weight: 100
+            text-transform: uppercase
+            &::before
+              content: ""
+              position: absolute
+              top: 0
+              width: 15px
+              height: 2px
+              background-color: $primary
+
+        // left column prof text
+        .prof-wrapper
+          margin-top: 15px
+          .item
+            font-family: 'Open Sans', sans-serif
+            font-size: 14px
+            font-weight: 600
+            .years
+              color: $primary
+              margin-bottom: 0
+            .description
+              color: $black
+              //margin-bottom: 0
+
+        // header images
+        img
+          &.logo
+            width: 320px
+            margin-left: -15px
+            margin-right: -15px
+          &.docs
+            width: 58px
+            margin-top: 20px
+            margin-left: -13px
+        .request-wrapper
+          margin-top: 25px
+          display: inline-block
+          .request-block
+            display: flex
+            flex-direction: column
+            align-items: center
+            .dates
+              margin-top: 15px
+              font-family: "Open Sans", sans-serif
+              font-size: 14px
+              text-decoration: underline
