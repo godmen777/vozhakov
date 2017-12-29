@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <h1>Products list</h1>
+        <div class="content">
+            {% for product in products %}
+                <div class="product">
+                    <h3>{{ product.name }}</h3>
+                    <div class="description">{{ product.description }}</div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock content %}
