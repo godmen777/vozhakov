@@ -14,6 +14,8 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SITE_ID = 1
+CKEDITOR_UPLOAD_PATH = "uploads/"
 
 
 # Quick-start development settings - unsuitable for production
@@ -41,6 +43,8 @@ INSTALLED_APPS = [
 
     'image_cropping',
     'easy_thumbnails',
+    'ckeditor',
+    'ckeditor_uploader',
 
     'products',
     'core',

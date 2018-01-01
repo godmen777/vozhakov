@@ -5,7 +5,11 @@ from django.contrib.sites.models import Site
 class SiteConfig(models.Model):
     site = models.OneToOneField(Site, related_name="site", on_delete=models.CASCADE)
     name = models.CharField(verbose_name="Название настройки", max_length=250)
-    top_menu = models.OneToOneField("SiteMenu", verbose_name="Верхнее меню", on_delete=models.CASCADE)
+    top_menu = models.OneToOneField("SiteMenu",
+                                    verbose_name="Верхнее меню",
+                                    on_delete=models.CASCADE,
+                                    null=True,
+                                    blank=True)
 
     class Meta:
         verbose_name = "Настройка сайта"
