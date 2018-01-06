@@ -120,7 +120,10 @@ body.main .navbar {
 
 body.main .main-header {
   padding: 45px 0;
-  background-color: #f1f2f2; }
+  background-color: #f1f2f2;
+  background-image: url(e1e5e344d43f9b0dc6780c6315c732c4.jpg);
+  background-repeat: no-repeat;
+  background-position: center; }
   body.main .main-header .header-wrapper {
     justify-content: space-between;
     flex-direction: row; }
