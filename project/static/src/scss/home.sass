@@ -1,0 +1,33 @@
+@import "./_colors.sass"
+
+.video-list-wrapper
+  position: relative
+  display: flex
+  justify-content: center
+  &::before
+    content: ''
+    position: absolute
+    top: -3px
+    width: 300px
+    height: 6px
+    background-color: $blueDodger
+  &::after
+    content: ''
+    position: absolute
+    bottom: -3px
+    width: 300px
+    height: 6px
+    background-color: $blueDodger
+  .video-list-container
+    overflow-x: auto
+    padding: 50px 0
+    .video-list
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      .video
+        margin: 0 10px
+        &:first-child
+          margin-left: 0
+        &:last-child
+          margin-right: 0

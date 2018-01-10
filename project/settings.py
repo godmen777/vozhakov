@@ -29,10 +29,51 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+JET_SIDE_MENU_ITEMS = [  # A list of application or custom item dicts
+    {
+        'label': 'Авторизация',
+        'items': [
+            {'name': 'auth.user', 'label': 'Пользователи'},
+        ],
+    },
+    {
+        'label': 'Обратная связь',
+        'items': [
+            {'name': 'core.review'},
+            {'name': 'core.question'},
+        ],
+    },
+    {
+        'label': 'Настройки',
+        'items': [
+            {'name': 'core.siteconfig'},
+            {'name': 'core.sitemenu'},
+            {'name': 'core.sitemenuitem'},
+        ],
+    },
+    {
+        'label': 'Видео',
+        'items': [
+            {'name': 'core.videocategory'},
+            {'name': 'core.video'},
+        ],
+    },
+    {
+        'label': 'Содержимое',
+        'items': [
+            {'name': 'core.page'},
+            {'name': 'core.article'},
+            {'name': 'core.news'},
+        ],
+    },
+]
+JET_SIDE_MENU_COMPACT = True
 
 # Application definition
 
 INSTALLED_APPS = [
+    'jet.dashboard',
+    'jet',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -46,9 +87,8 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
 
-    'products',
+    # 'products',
     'core',
-    'config',
 ]
 
 MIDDLEWARE = [

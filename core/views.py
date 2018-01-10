@@ -1,12 +1,11 @@
 from django.shortcuts import render
-from products.models import Product, Category
+from core.models import Video
 
 
 def index_view(request):
-
-    products = Product.objects.all()
+    video_list = Video.objects.all()
 
     return render(request, "core/home.html", {
         'name': 'Home page',
-        'products': products,
+        'video_list': video_list,
     })

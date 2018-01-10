@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from config.models import SiteConfig
+from core.models import SiteConfig
 from django.contrib.sites.models import Site
 
 
