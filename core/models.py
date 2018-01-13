@@ -109,6 +109,9 @@ class Page(models.Model):
     def get_image(self):
         return "/media/{}".format(self.image)
 
+    def get_url(self):
+        return "/pages/{}".format(self.slug)
+
     def __str__(self):
         return self.title
 

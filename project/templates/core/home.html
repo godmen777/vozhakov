@@ -97,21 +97,27 @@
     <div class="container">
         <div class="row">
             <div class="col-md-2">
-                <img src="{{ first_page.get_image }}" width="100%" alt="">
+                {% if first_page %}
+                    <img src="{{ first_page.get_image }}" width="100%" alt="">
+                {% endif %}
             </div>
             <div class="col-md-5">
-                <div class="info-content">
-                    <h3 class="title">{{ first_page.title }}</h3>
-                    <p>{{ first_page.short_description|safe }}</p>
-                    <a class="link" href="{{ first_page.get_url }}">подробнее</a>
-                </div>
+                {% if first_page %}
+                    <div class="info-content">
+                        <h3 class="title">{{ first_page.title }}</h3>
+                        <p>{{ first_page.short_description|safe }}</p>
+                        <a class="link" href="{{ first_page.get_url }}">подробнее</a>
+                    </div>
+                {% endif %}
             </div>
             <div class="col-md-5">
-                <div class="info-content">
-                    <h3 class="title">{{ second_page.title }}</h3>
-                    <p>{{ second_page.short_description|safe }}</p>
-                    <a class="link" href="{{ second_page.get_url }}">подробнее</a>
-                </div>
+                {% if second_page %}
+                    <div class="info-content">
+                        <h3 class="title">{{ second_page.title }}</h3>
+                        <p>{{ second_page.short_description|safe }}</p>
+                        <a class="link" href="{{ second_page.get_url }}">подробнее</a>
+                    </div>
+                {% endif %}
             </div>
         </div>
     </div>

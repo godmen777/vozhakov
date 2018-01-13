@@ -17,6 +17,15 @@
 </head>
 <body class="main">
 
+<!-- error block -->
+{% if request.user.is_superuser %}
+    {% if error_message %}
+        <div id="error-block">
+            {{ error_message }}
+        </div>
+    {% endif %}
+{% endif %}
+
 <!-- Navigation -->
 {% top_menu request %}
 
