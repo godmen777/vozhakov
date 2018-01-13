@@ -96,11 +96,18 @@ class Video(models.Model):
 class Page(models.Model):
     title = models.CharField(max_length=255, verbose_name="Заголовок")
     slug = models.SlugField(max_length=255, unique=True)
+    image = models.ImageField(verbose_name="Изображение", upload_to="pages", blank=True, null=True)
+    short_description = RichTextUploadingField(verbose_name="Краткое содержание")
     description = RichTextUploadingField(verbose_name="Содержание")
+    is_main_first = models.BooleanField(default=False, verbose_name="Первый блок инфо на главной")
+    is_main_second = models.BooleanField(default=False, verbose_name="Второй блок инфо на главной")
 
     class Meta:
         verbose_name = "Страница"
         verbose_name_plural = "Страницы"
+
+    def get_image(self):
+        return "/media/{}".format(self.image)
 
     def __str__(self):
         return self.title
@@ -184,6 +191,22 @@ class Request(models.Model):
     class Meta:
         verbose_name = "Заявка"
         verbose_name_plural = "Заявки"
+
+    def __str__(self):
+        return self.name
+
+    def __unicode__(self):
+        return self.name
+
+
+class Direction(models.Model):
+    name = models.CharField(max_length=255, verbose_name="Название направления")
+    slug = models.SlugField(max_length=255, unique=True)
+    image = models.ImageField(upload_to="directions", verbose_name="Изображение")
+
+    class Meta:
+        verbose_name = "Направление"
+        verbose_name_plural = "Направления"
 
     def __str__(self):
         return self.name
