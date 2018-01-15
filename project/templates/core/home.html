@@ -10,7 +10,7 @@
                         <div class="col-md-10">
                             <img class="logo" src="{% static 'src/img/logo@2x.png' %}" alt="">
                             <div class="text-container">
-                                <p class="text">Педиатрия, инфекционные болезни, гепатология</p>
+                                <p class="title-small">Педиатрия, инфекционные болезни, гепатология</p>
                             </div>
                             <img class="docs" src="{% static 'src/img/doc-icon@2x.png' %}" alt="">
                             <div class="prof-wrapper">
@@ -73,8 +73,9 @@
 {% endblock %}
 
 {% block content %}
+
 <div class="container">
-    <div class="row video-list-wrapper">
+    <div class="row video-list-wrapper block-border-before block-border-after">
         <div class="col-12 video-list-container">
             <div class="video-list">
                 {% for video in video_list %}
@@ -93,6 +94,7 @@
         </div>
     </div>
 </div>
+
 <div class="info-block-wrapper">
     <div class="container">
         <div class="row">
@@ -104,8 +106,10 @@
             <div class="col-md-5">
                 {% if first_page %}
                     <div class="info-content">
-                        <h3 class="title">{{ first_page.title }}</h3>
-                        <p>{{ first_page.short_description|safe }}</p>
+                        <div class="content">
+                            <h3 class="title">{{ first_page.title }}</h3>
+                            <p>{{ first_page.short_description|safe }}</p>
+                        </div>
                         <a class="link" href="{{ first_page.get_url }}">подробнее</a>
                     </div>
                 {% endif %}
@@ -113,8 +117,10 @@
             <div class="col-md-5">
                 {% if second_page %}
                     <div class="info-content">
-                        <h3 class="title">{{ second_page.title }}</h3>
-                        <p>{{ second_page.short_description|safe }}</p>
+                        <div class="content">
+                            <h3 class="title">{{ second_page.title }}</h3>
+                            <p>{{ second_page.short_description|safe }}</p>
+                        </div>
                         <a class="link" href="{{ second_page.get_url }}">подробнее</a>
                     </div>
                 {% endif %}
@@ -122,4 +128,114 @@
         </div>
     </div>
 </div>
+
+<div class="directions-wrapper">
+    <div class="container">
+        <div class="row">
+            {% for direction in directions %}
+                <div class="col-md-4">
+                    <div class="direction-logo">
+                        <img src="{{ direction.get_image }}" width="130" alt="">
+                    </div>
+                    <div class="direction-content">
+                        <h3 class="title">{{ direction.name }}</h3>
+                        <p>{{ direction.page.short_description|safe }}</p>
+                    </div>
+                    <a class="link" href="{{ second_page.get_url }}">подробнее</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="trigger">Профилактика онкологочиских болезней и восстановление</div>
+
+<div class="feedback-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h3 class="title">Задайте вопрос доктору Вожакову</h3>
+                <!-- question form  -->
+                <form action="" id="question-form">
+                    <textarea type="text" placeholder="Введите ваш вопрос" class="form"></textarea>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <input type="text" placeholder="Введите ваше имя" class="form">
+                        </div>
+                        <div class="col-md-7">
+                            <input type="text" placeholder="Введите ваш email" class="form">
+                        </div>
+                    </div>
+                    <div class="button-wrapper">
+                        <button class="button">Отправить</button>
+                    </div>
+                </form>
+                <div class="questions">
+                    {% for question in questions %}
+                        <div class="question">
+                            <div class="name title-small">{{ question.name }}</div>
+                            <div class="text">{{ question.text|safe }}</div>
+                            <div class="answer">{{ question.answer|safe }}</div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <a href="/questions">Читать все ответы на вопросы</a>
+            </div>
+            <div class="col-md-4">
+                <h3 class="title">Оставить заявку на консультацию</h3>
+                <!-- request form  -->
+                <form action="" id="request-form">
+                    <input type="text" placeholder="Введите ваше имя" class="form">
+                    <input type="text" placeholder="Введите ваш телефон" class="form">
+                    <input type="text" placeholder="Введите ваш email" class="form">
+                    <div class="button-wrapper">
+                        <button class="button">Оставить заявку</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="reviews-wrapper block-border-before">
+    <div class="container">
+        <div class="row">
+            <div class="reviews">
+                <div class="col-md-9">
+                    <h3 class="title">Отзывы пыциентов</h3>
+                    {% for review in reviews %}
+                        <div class="review">
+                            <div>
+                                <img src="{{ review.get_image }}" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="name title-small">{{ review.name }}</div>
+                                <div class="text">{{ review.text|safe }}</div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    <div class="button-wrapper">
+                        <button class="button">Оставить отзыв</button>
+                        <a href="">Читать все отзывы</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="trigger2">
+    <div class="content">
+        Человек — высший продукт земной природы. Человек — сложнейшая и тончайшая система. Но для того чтобы наслаждаться сокровищами природы, человек должен быть здоровым, сильным и умным.
+        <div class="author">
+            <div class="content">
+                <div class="name">
+                    Иван Петрович Павлов,
+                </div>
+                физиолог, создатель науки о высшей нервной деятельности, физиологической школы.
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}

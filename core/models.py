@@ -93,7 +93,27 @@ class Video(models.Model):
         return self.title
 
 
+class Direction(models.Model):
+    name = models.CharField(max_length=255, verbose_name="Название направления")
+    slug = models.SlugField(max_length=255, unique=True)
+    image = models.ImageField(upload_to="directions", verbose_name="Изображение")
+
+    class Meta:
+        verbose_name = "Направление"
+        verbose_name_plural = "Направления"
+
+    def get_image(self):
+        return "/media/{}".format(self.image)
+
+    def __str__(self):
+        return self.name
+
+    def __unicode__(self):
+        return self.name
+
+
 class Page(models.Model):
+    direction = models.ForeignKey(Direction, verbose_name="Направление", on_delete=models.CASCADE, blank=True, null=True)
     title = models.CharField(max_length=255, verbose_name="Заголовок")
     slug = models.SlugField(max_length=255, unique=True)
     image = models.ImageField(verbose_name="Изображение", upload_to="pages", blank=True, null=True)
@@ -153,13 +173,16 @@ class News(models.Model):
 
 class Review(models.Model):
     name = models.CharField(max_length=255, verbose_name="Имя")
-    slug = models.SlugField(max_length=255, unique=True)
     email = models.CharField(max_length=255, verbose_name="email")
-    description = RichTextUploadingField(verbose_name="Отзыв")
+    text = models.TextField(verbose_name="Отзыв")
+    image = models.ImageField(upload_to="reviews", verbose_name="Изображение")
 
     class Meta:
         verbose_name = "Отзыв"
         verbose_name_plural = "Отзывы"
+
+    def get_image(self):
+        return "/media/{}".format(self.image)
 
     def __str__(self):
         return self.name
@@ -170,9 +193,9 @@ class Review(models.Model):
 
 class Question(models.Model):
     name = models.CharField(max_length=255, verbose_name="Имя")
-    slug = models.SlugField(max_length=255, unique=True)
     email = models.CharField(max_length=255, verbose_name="email")
-    description = RichTextUploadingField(verbose_name="Вопрос")
+    text = models.TextField(verbose_name="Вопрос")
+    answer = models.TextField(verbose_name="Ответ")
 
     class Meta:
         verbose_name = "Вопрос"
@@ -201,18 +224,3 @@ class Request(models.Model):
     def __unicode__(self):
         return self.name
 
-
-class Direction(models.Model):
-    name = models.CharField(max_length=255, verbose_name="Название направления")
-    slug = models.SlugField(max_length=255, unique=True)
-    image = models.ImageField(upload_to="directions", verbose_name="Изображение")
-
-    class Meta:
-        verbose_name = "Направление"
-        verbose_name_plural = "Направления"
-
-    def __str__(self):
-        return self.name
-
-    def __unicode__(self):
-        return self.name

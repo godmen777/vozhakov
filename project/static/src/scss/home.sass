@@ -1,23 +1,6 @@
 @import "./_colors.sass"
 
 .video-list-wrapper
-  position: relative
-  display: flex
-  justify-content: center
-  &::before
-    content: ''
-    position: absolute
-    top: -3px
-    width: 300px
-    height: 6px
-    background-color: $blueDodger
-  &::after
-    content: ''
-    position: absolute
-    bottom: -3px
-    width: 300px
-    height: 6px
-    background-color: $blueDodger
   .video-list-container
     overflow-x: auto
     padding: 50px 0
@@ -35,17 +18,155 @@
 .info-block-wrapper
   background-color: $gray
   padding: 75px 0 50px 0
+  .info-content
+    display: flex
+    flex-direction: column
+    flex: 1
+    .content
+      flex: 1
+      .title
+        font-weight: 800
+        font-size: 24px
+        letter-spacing: 1.5px
+        margin-bottom: 40px
+        &::before
+          left: 0px
+      
+.directions-wrapper
+  padding: 50px 0
+  font-family: 'Open Sans', sans-serif
   .title
-    font-family: 'Open Sans', sans-serif
-    font-weight: 800
-    font-size: 24px
-    letter-spacing: 1.5px
-    margin-bottom: 40px
+    position: relative
+    margin-top: 40px
+    min-height: 66px
     &::before
       content: ""
       position: absolute
       top: -15px
-      left: 15px
+      left: 0
       height: 3px
       width: 25px
       background-color: $blueDodger
+  .direction-logo
+    position: relative
+    height: 130px
+    img
+      position: absolute
+      bottom: 0
+  .direction-content
+    margin-bottom: 30px
+    ul
+      padding-left: 0
+      li
+        list-style: none
+        position: relative
+        margin-bottom: 10px
+        &::before
+          content: "-"
+          position: absolute
+          width: 10px
+          height: 2px
+          top: 0
+          left: -10px
+          color: $blueDodger
+
+.trigger
+  background: linear-gradient(to right, $blueDodger, $pinkHeliotrope)
+  color: $white
+  font-family: 'Open Sans', sans-serif
+  font-size: 24px
+  height: 68px
+  display: flex
+  justify-content: center
+  align-items: center
+
+.feedback-wrapper
+  background-color: $gray
+  padding-bottom: 50px
+  .title
+    width: 250px
+    margin-top: 40px
+    min-height: 66px
+    font-size: 24px
+    font-weight: 700
+  #question-form
+    display: flex
+    flex-direction: column
+    textarea
+      height: 187px
+      border: none
+      padding: 19px 17px
+    input
+      width: 100%
+  #request-form
+    display: flex
+    flex-direction: column
+  .form
+    margin-bottom: 17px
+  .questions
+    margin-top: 40px
+    .question
+      margin-bottom: 40px
+      font-family: 'Open Sans', sans-serif
+      &:last-child
+        margin-bottom: 20px
+      .name
+        font-weight: 600
+        letter-spacing: 0px
+        margin-bottom: 10px
+        &.title-small
+          &::before
+            top: -5px
+      .text
+        font-weight: 600
+        letter-spacing: 0px
+
+.reviews-wrapper
+  padding: 0 0 50px 0
+  .title
+    margin-top: 40px
+    min-height: 66px
+    font-size: 24px
+    font-weight: 700
+  .reviews
+    .review
+      display: flex
+      margin-bottom: 40px
+      font-family: 'Open Sans', sans-serif
+      img
+        width: 120px
+      .content
+        margin-left: 40px
+        .name
+          font-weight: 600
+          letter-spacing: 0px
+          margin-bottom: 20px
+          &.title-small
+            &::before
+              bottom: -5px
+              top: auto
+              background-color: $black
+  .button-wrapper
+    a
+      margin-left: 20px
+
+.trigger2
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 50px 0 70px 0
+  background-color: $gray
+  .content
+    max-width: 621px
+    font-family: 'Open Sans', sans-serif
+    .author
+      display: flex
+      justify-content: flex-end
+      .content
+        max-width: 200px
+        font-family: 'Open Sans', sans-serif
+        font-size: 12px
+        text-align: right
+        .name
+          font-weight: 700
+

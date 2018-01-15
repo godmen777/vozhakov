@@ -1,5 +1,5 @@
 from django.contrib import admin
-from core.models import VideoCategory, Video, SiteConfig, SiteMenu, SiteMenuItem, Page, Article, News, Review, Question
+from core.models import VideoCategory, Video, SiteConfig, SiteMenu, SiteMenuItem, Page, Article, News, Review, Question, Direction
 
 
 class SiteConfigAdmin(admin.ModelAdmin):
@@ -28,14 +28,8 @@ class NewsAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
 
 
-
-class ReviewAdmin(admin.ModelAdmin):
-    model = Review
-    prepopulated_fields = {'slug': ('name',)}
-
-
-class QuestionAdmin(admin.ModelAdmin):
-    model = Question
+class DirectionAdmin(admin.ModelAdmin):
+    model = Direction
     prepopulated_fields = {'slug': ('name',)}
 
 
@@ -47,5 +41,6 @@ admin.site.register(Video)
 admin.site.register(Page, PageAdmin)
 admin.site.register(Article, ArticleAdmin)
 admin.site.register(News, NewsAdmin)
-admin.site.register(Review, ReviewAdmin)
-admin.site.register(Question, QuestionAdmin)
+admin.site.register(Review)
+admin.site.register(Question)
+admin.site.register(Direction, DirectionAdmin)

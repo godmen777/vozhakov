@@ -64,6 +64,7 @@ JET_SIDE_MENU_ITEMS = [  # A list of application or custom item dicts
             {'name': 'core.page'},
             {'name': 'core.article'},
             {'name': 'core.news'},
+            {'name': 'core.direction'},
         ],
     },
 ]
