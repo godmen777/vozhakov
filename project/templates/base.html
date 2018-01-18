@@ -38,9 +38,51 @@
 {% endblock %}
 
 <!-- Footer -->
-<footer class="py-5">
+<footer class="footer">
     <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="{% static 'src/img/logo-2@2x.png' %}" width="173" alt="">
+            </div>
+            <div class="col-md-3">
+                <div class="contacts-wrapper">
+                    <table>
+                        <tr>
+                            <td class="left">
+                                <img src="{% static 'src/img/phone-icon2@2x.png' %}" alt="">
+                            </td>
+                            <td>
+                                <div class="data">
+                                    <div class="bold">8 913 866-26-66</div>
+                                    <div>С 10:00 до 20:00</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="left">
+                                <img src="{% static 'src/img/location-icon2@2x.png' %}" alt="">
+                            </td>
+                            <td>
+                                <div class="data">
+                                    <div>Иркутский тр., 71д, 3 этаж, офис 1</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="social">
+                    <img src="{% static 'src/img/vk@2x.png' %}" width="37px" height="37px" alt="">
+                    <img src="{% static 'src/img/insta@2x.png' %}" width="37px" height="37px" alt="">
+                    <img src="{% static 'src/img/fb@2x.png' %}" width="37px" height="37px" alt="">
+                    <img src="{% static 'src/img/skype@2x.png' %}" width="37px" height="37px" alt="">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <button class="button">Оставить отзыв</button>
+            </div>
+        </div>
     </div>
     <!-- /.container -->
 </footer>

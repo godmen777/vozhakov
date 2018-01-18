@@ -243,7 +243,28 @@ body.main .main-header {
           font-size: 14px;
           text-decoration: underline; }
 body.main footer {
+  padding: 67px 0 71px 0;
   background: linear-gradient(to right, #3A83FF, #BC48FF); }
+  body.main footer .contacts-wrapper {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px; }
+    body.main footer .contacts-wrapper table .left {
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 5px; }
+    body.main footer .contacts-wrapper table .data {
+      margin: 0 0 12px 10px;
+      color: #ffffff; }
+    body.main footer .contacts-wrapper img {
+      height: 16px; }
+    body.main footer .contacts-wrapper .bold {
+      font-weight: 700; }
+  body.main footer .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+  body.main footer button {
+    width: 100%; }
 .video-list-wrapper .video-list-container {
   overflow-x: auto;
   padding: 50px 0; }
