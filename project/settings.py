@@ -27,7 +27,7 @@ SECRET_KEY = 'e=m4@#06qpl4zs6*4t%2x^o8_h4thmuvo+i3&e6-+1zqx^q6*@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['example.org', ]
+ALLOWED_HOSTS = ['example.org', 'localhost']
 
 JET_SIDE_MENU_ITEMS = [  # A list of application or custom item dicts
     {
